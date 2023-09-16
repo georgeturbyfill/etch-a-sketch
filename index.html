@@ -24,30 +24,26 @@
 
     function makeDiv(numDivs) {
       for(d = 1; d <= numDivs; d++) {
-        cell = document.createElement('div');
-        divContainer.appendChild(cell)
-        cell.classList.add('block')
+        let cell = document.createElement('div');
+        divContainer.appendChild(cell);
+        cell.classList.add('block');
 
       }
-
-     
-    
-      
-      // const hover = document.querySelectorAll(".block");
-      // hover.forEach(div => {
-      //   div.addEventListener('mouseover', () => {
-      //     cell.setAttribute("style", "background-color:black;")
-      //  });
-      // });
     }
 
-
-  
     makeDiv(128);
-    
-    
-    
-    
+
+    function addColor(div) {
+      div.classList.add('black');
+    }
+  
+    const hover = document.querySelectorAll('.block'); 
+    hover.forEach((div) => {
+      div.addEventListener('mouseover', () => {
+        addColor(div);
+      });
+    });
+  
   </script>
 </body>
 </html>
